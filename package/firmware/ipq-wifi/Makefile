@@ -5,10 +5,11 @@ PKG_NAME:=ipq-wifi
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL=$(PROJECT_GIT)/project/firmware/qca-wireless.git
-PKG_SOURCE_DATE:=2025-10-22
-PKG_SOURCE_VERSION:=ec6831a43ff066c9873e7c41fd6f68354bb67b4a
-PKG_MIRROR_HASH:=33a26f90fd450e9dc2b2d5ae9c137ffcd57ef62dac277d63c5d5f6f5a1262a2f
+#PKG_SOURCE_URL=$(PROJECT_GIT)/project/firmware/qca-wireless.git
+PKG_SOURCE_URL=https://github.com/ambassador86/firmware_qca-wireless.git
+PKG_SOURCE_DATE:=2025-10-26
+PKG_SOURCE_VERSION:=ca239f275fa6ea6d6f4e94b757351fd421317038
+PKG_MIRROR_HASH:=7238a3955347e1fbcbf21f28fa163a40b71109c4e99ef0c8f857528b03013e01
 PKG_FLAGS:=nonshared
 
 include $(INCLUDE_DIR)/package.mk
@@ -61,6 +62,7 @@ ALLWIFIBOARDS:= \
 	meraki_z3 \
 	netgear_lbr20 \
 	netgear_rax120v2 \
+	netgear_rbw30 \
 	netgear_sxk80 \
 	netgear_wax214 \
 	netgear_wax218 \
@@ -237,6 +239,7 @@ $(eval $(call generate-ipq-wifi-package,meraki_mr30h,Meraki MR30H))
 $(eval $(call generate-ipq-wifi-package,meraki_z3,Meraki Z3))
 $(eval $(call generate-ipq-wifi-package,netgear_lbr20,Netgear LBR20))
 $(eval $(call generate-ipq-wifi-package,netgear_rax120v2,Netgear RAX120v2))
+$(eval $(call generate-ipq-wifi-package,netgear_rbw30,Netgear RBW30))
 $(eval $(call generate-ipq-wifi-package,netgear_sxk80,Netgear SXK80))
 $(eval $(call generate-ipq-wifi-package,netgear_wax214,Netgear WAX214))
 $(eval $(call generate-ipq-wifi-package,netgear_wax218,Netgear WAX218))
