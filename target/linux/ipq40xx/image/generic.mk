@@ -911,6 +911,17 @@ define Device/netgear_lbr20
 endef
 TARGET_DEVICES += netgear_lbr20
 
+define Device/netgear_rbw30
+	$(call Device/netgear_orbi)
+	DEVICE_MODEL := RBW30
+	NETGEAR_BOARD_ID := RBW30
+	NETGEAR_HW_ID := 29765515+0+4096+256+2x2+2x2+2x2
+	KERNEL_SIZE := 3932160
+	ROOTFS_SIZE := 32243712
+	IMAGE_SIZE := 36175872
+	DEVICE_PACKAGES := ipq-wifi-netgear_rbw30 ath10k-firmware-qca9888-ct
+endef
+
 define Device/netgear_rbx40
 	$(call Device/netgear_orbi)
 	NETGEAR_HW_ID := 29765515+0+4096+512+2x2+2x2+2x2
